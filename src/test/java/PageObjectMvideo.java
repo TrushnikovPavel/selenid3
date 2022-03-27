@@ -31,7 +31,7 @@ public class PageObjectMvideo {
     @FindBy(xpath = productCardContainer + "//span[contains(@class, 'product-rating__feedback')]")
     private SelenideElement productCardFeedback;
 
-    @FindBy(xpath = productInfo+"[1]")  //"//span[contains(@class, 'product-feature-list__name']"
+    @FindBy(xpath = productInfo)  //"//span[contains(@class, 'product-feature-list__name']"
     private SelenideElement productCardInformationList;
 
     private final String numberInformationString = "[3]";
