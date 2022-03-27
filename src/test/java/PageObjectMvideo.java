@@ -2,6 +2,7 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
 import java.util.Objects;
 
 public class PageObjectMvideo {
@@ -11,13 +12,11 @@ public class PageObjectMvideo {
     private final String productInfo = "//ul[contains(@class, 'product-feature-list')]";
     private final String productCheckOut = "//div[contains(@class, 'product-checkout')]";
 
-
-
-
-
-
     @FindBy(xpath = "//div[contains(@class, 'listing-view-switcher')]")
     private SelenideElement buttonList ;
+
+    @FindBy(xpath = "(//mvid-plp-product-title[contains(@class, 'product-card--list__title')])")
+    public List<SelenideElement> productCardName;
 
 //    @FindBy(xpath = productCardContainer + "//a[contains(@class, 'product-title__text')]")   // "//div[contains(@class, 'product-title')]"
 //    public SelenideElement productCardName ;
@@ -26,8 +25,8 @@ public class PageObjectMvideo {
 //    public SelenideElement productCardName ;
     //div[contains(@class, 'product-cards-layout__item')]//a[contains(text(), 'Телевизор Haier 65 Smart TV MX ')]
 
-     @FindBy(xpath = "//a[contains(text(), 'Телевизор Haier 65 Smart TV MX ')]")   // "//div[contains(@class, 'product-title')]"
-     public SelenideElement productCardName ;
+//     @FindBy(xpath = "//a[contains(text(), 'Телевизор Haier 65 Smart TV MX ')]")   // "//div[contains(@class, 'product-title')]"
+//     public SelenideElement productCardName ;
 
     @FindBy(xpath = productCardContainer + "//span[contains(@class, 'product-rating__feedback')]")
     private SelenideElement productCardFeedback;

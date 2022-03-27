@@ -12,17 +12,20 @@ public class PageObjectFilter {
     private final String maxPrice ="//input[contains(@name, 'maxPrice')]";
     //input[contains(@name, 'minPrice')]
 
-    public final String numberAccordionFilter = "[5]";
+    public final String numberAccordionFilter = "[1]";
     @FindBy(xpath = "(" + filterContainer + "//mvid-accordion"+ ")"+numberAccordionFilter)
     private SelenideElement accordionFilter;
 
-    public final String numberSwitcherFilter = "[5]";
+    public final String numberSwitcherFilter = "[1]";
     @FindBy(xpath = "("+filterContainer + "//mvid-switcher"+")"+numberSwitcherFilter)
     public SelenideElement switcherFilter;
 
-    public final String accordionFilterCheckBoxNumber = "[5]";
-    @FindBy(xpath = "("+"("+filterContainer + "//mvid-switcher"+")"+numberAccordionFilter+ "//div[contains(@class, 'checkbox-wrap')])"+")"+ accordionFilterCheckBoxNumber)
-    public SelenideElement accordionFilterCheckBox;
+//    public final String accordionFilterCheckBoxNumber = "[1]";
+//    @FindBy(xpath = "("+"("+filterContainer + "//mvid-switcher"+")"+numberAccordionFilter+ "//div[contains(@class, 'checkbox-wrap')])"+")"+ accordionFilterCheckBoxNumber)
+//    public SelenideElement accordionFilterCheckBox;
+
+    @FindBy(xpath = "//mvid-icon[contains(@class, 'checkbox__icon')]" )
+    public SelenideElement accordionFilterCheckBoxForClick;
 
     @FindBy(xpath = "("+filterContainer + "//mvid-switcher"+")"+numberAccordionFilter+"//input[contains(@class, 'input__field')]")
     public SelenideElement accordionFilterCheckBoxSearcherField;
